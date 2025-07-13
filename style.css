@@ -144,15 +144,29 @@ footer {
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
   }
   .hero, .container, section, footer {
-    margin-left: 0;
+    margin-left: 200px;
     padding: 30px 16px;
   }
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .typing {
+    font-size: 1rem;
+  }
 }
+
 /* === FADE-IN ANIMATION === */
 .fade-in {
   opacity: 0;
