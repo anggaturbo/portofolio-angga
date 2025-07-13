@@ -15,7 +15,7 @@ links.forEach(link => {
   }
 });
 
-// Dark mode toggle
+// Tombol dark mode (ditambahkan via script, tidak dari HTML)
 const toggle = document.createElement("button");
 toggle.textContent = "🌙/☀️";
 toggle.className = "toggle-dark";
@@ -27,6 +27,7 @@ document.body.appendChild(toggle);
 if (localStorage.getItem("darkMode") === "true") {
   document.body.classList.add("dark");
 }
+
 // Efek Ketik Otomatis
 const typingEl = document.querySelector(".typing");
 const phrases = ["Frontend Developer", "UI Designer", "Web Enthusiast"];
@@ -36,5 +37,5 @@ function typeLoop() {
   typingEl.textContent = phrases[index];
   index = (index + 1) % phrases.length;
 }
-setInterval(typeLoop, 4000); // ganti teks tiap 4 detik
+setInterval(typeLoop, 4000);
 typeLoop();
