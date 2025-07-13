@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -6,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portofolio Angga Maulana</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav class="navbar">
@@ -26,15 +26,21 @@
     <p>Saya mahasiswa Sistem Informasi di IPI Garut, fokus pada pengembangan web dan desain UI/UX. Saya aktif di organisasi dan senang belajar hal baru.</p>
   </section>
 
-  <section class="container fade-in">
+  <section class="container fade-in" id="contact">
     <h2>Kontak</h2>
     <form action="https://formspree.io/f/mzbldgjj" method="POST">
-      <input type="text" name="nama" placeholder="Nama Anda" required>
-      <input type="email" name="email" placeholder="Email Anda" required>
-      <textarea name="pesan" placeholder="Pesan Anda" rows="5" required></textarea>
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" placeholder="Nama Anda" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Email Anda" required>
+
+      <label for="pesan">Pesan:</label>
+      <textarea id="pesan" name="pesan" placeholder="Pesan Anda" rows="5" required></textarea>
+
       <button type="submit">Kirim</button>
     </form>
-    <p><a href="cv-angga.pdf" class="btn" target="_blank">Lihat CV Saya</a></p>
+    <p><a href="cv-angga.pdf" class="btn" target="_blank">📄 Lihat CV Saya</a></p>
   </section>
 
   <button id="scrollTopBtn">↑</button>
