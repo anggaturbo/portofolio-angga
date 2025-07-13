@@ -27,3 +27,14 @@ document.body.appendChild(toggle);
 if (localStorage.getItem("darkMode") === "true") {
   document.body.classList.add("dark");
 }
+// Efek Ketik Otomatis
+const typingEl = document.querySelector(".typing");
+const phrases = ["Frontend Developer", "UI Designer", "Web Enthusiast"];
+let index = 0;
+
+function typeLoop() {
+  typingEl.textContent = phrases[index];
+  index = (index + 1) % phrases.length;
+}
+setInterval(typeLoop, 4000); // ganti teks tiap 4 detik
+typeLoop();

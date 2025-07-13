@@ -153,3 +153,45 @@ footer {
     padding: 30px 16px;
   }
 }
+/* === FADE-IN ANIMATION === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === TYPING EFFECT === */
+.typing {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4a00e0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #4a00e0;
+  width: 0;
+  animation: typing 4s steps(40, end) infinite, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
