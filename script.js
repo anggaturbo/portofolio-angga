@@ -1,1 +1,1 @@
-console.log('Script aktif');
+console.log('Portofolio Angga aktif');

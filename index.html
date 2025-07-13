@@ -1,1 +1,44 @@
-<!DOCTYPE html><html><head><title>Index</title></head><body><h1>Portofolio Angga</h1></body></html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beranda - Angga Maulana</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Beranda</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+    </ul>
+  </nav>
+  <header class="hero">
+    <img src="profile.jpg" alt="Foto Angga" class="profile-pic" />
+    <h1>Halo, Saya Angga</h1>
+    <p>Frontend Developer | UI Designer</p>
+  </header>
+
+  <section class="container">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah mahasiswa aktif di IPI Garut jurusan Sistem Informasi, bersemangat di dunia teknologi, desain antarmuka, dan pengembangan web.</p>
+  </section>
+
+  <section class="container">
+    <h2>Kontak</h2>
+    <form action="https://formspree.io/f/mzbldgjj" method="POST">
+      <input type="text" name="nama" placeholder="Nama Anda" required>
+      <input type="email" name="email" placeholder="Email Anda" required>
+      <textarea name="pesan" placeholder="Pesan Anda" rows="5" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+    <p><a href="cv-angga.pdf" target="_blank" class="btn">Lihat CV</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Angga Maulana</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
