@@ -8,10 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="sidebar">
     <ul>
       <li><a href="index.html" class="active">Beranda</a></li>
-      <li><a href="#tentang.html">Tentang Saya</a></li>
+      <li><a href="tentang.html">Tentang Saya</a></li>
       <li><a href="galeri.html">Galeri</a></li>
     </ul>
   </nav>
@@ -22,7 +22,6 @@
     <p>Frontend Developer | UI Designer</p>
   </header>
 
-  <!-- Bagian Tentang Saya dari isi CV -->
   <section id="tentang" class="container fade-in">
     <h2>Tentang Saya</h2>
     <p>Saya Angga Maulana, mahasiswa aktif di Institut Pendidikan Indonesia Garut jurusan Sistem Informasi. Saya memiliki ketertarikan besar dalam bidang pengembangan frontend, desain UI/UX, dan pengelolaan proyek. Saya aktif dalam organisasi kemahasiswaan dan memiliki pengalaman kolaborasi tim dalam berbagai kegiatan akademik dan non-akademik.</p>
@@ -33,13 +32,10 @@
     <form action="https://formspree.io/f/mzbldgjj" method="POST">
       <label for="nama">Nama:</label>
       <input type="text" id="nama" name="nama" placeholder="Nama Anda" required>
-
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" placeholder="Email Anda" required>
-
       <label for="pesan">Pesan:</label>
       <textarea id="pesan" name="pesan" placeholder="Pesan Anda" rows="5" required></textarea>
-
       <button type="submit">Kirim</button>
     </form>
     <p><a href="cv-angga.pdf" class="btn" target="_blank">📄 Lihat CV Saya</a></p>
@@ -50,7 +46,6 @@
   <footer>
     <p>&copy; 2025 Angga Maulana</p>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
