@@ -1,40 +1,13 @@
-// Tombol Scroll ke Atas
-window.addEventListener("scroll", function () {
-  const scrollBtn = document.getElementById("scrollTopBtn");
-  if (scrollBtn) scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
-});
-document.getElementById("scrollTopBtn")?.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
 
-// Highlight Navigation
-const links = document.querySelectorAll("nav ul li a");
-links.forEach(link => {
-  if (window.location.href.includes(link.getAttribute("href"))) {
-    link.classList.add("active");
-  }
+emailjs.init("YOUR_PUBLIC_KEY");
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+    .then(function() {
+      alert('SUCCESS!');
+    }, function(error) {
+      alert('FAILED...', error);
+    });
 });
-
-// Tombol Dark Mode
-const toggle = document.createElement("button");
-toggle.textContent = "🌙/☀️";
-toggle.className = "toggle-dark";
-toggle.onclick = () => {
-  document.body.classList.toggle("dark");
-  localStorage.setItem("darkMode", document.body.classList.contains("dark"));
-};
-document.body.appendChild(toggle);
-if (localStorage.getItem("darkMode") === "true") {
-  document.body.classList.add("dark");
-}
-
-// Efek Mengetik
-const typingEl = document.querySelector(".typing");
-const phrases = ["Frontend Developer", "UI Designer", "Web Enthusiast"];
-let index = 0;
-function typeLoop() {
-  typingEl.textContent = phrases[index];
-  index = (index + 1) % phrases.length;
-}
-setInterval(typeLoop, 4000);
-typeLoop();
+    
