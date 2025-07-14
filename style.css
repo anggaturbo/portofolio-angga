@@ -17,8 +17,6 @@ body {
   background: var(--bg);
   color: var(--text);
 }
-
-/* === SIDEBAR === */
 .sidebar {
   position: fixed;
   top: 0;
@@ -44,8 +42,6 @@ body {
 .sidebar ul li a:hover {
   background: rgba(255,255,255,0.2);
 }
-
-/* === KONTEN UTAMA CENTER === */
 .hero, .container, section, footer {
   margin-left: 220px;
   padding: 40px 20px;
@@ -82,8 +78,6 @@ button, .btn, .toggle-dark {
 button:hover, .btn:hover {
   background: #5d3bd0;
 }
-
-/* === FOTO PROFILE === */
 .profile-pic {
   width: 140px;
   height: 140px;
@@ -93,38 +87,23 @@ button:hover, .btn:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   margin-bottom: 15px;
 }
-
-/* === GALERI === */
-.galeri-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+.sosial-media-icons {
+  display: flex;
   gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 20px;
 }
-.galeri-grid img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.sosial-media-icons a svg {
+  width: 40px;
+  height: 40px;
+  fill: #4a00e0;
+  transition: transform 0.3s ease;
 }
-.galeri-grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+.sosial-media-icons a:hover svg {
+  transform: scale(1.2);
+  fill: #8e2de2;
 }
-
-/* === TESTIMONI === */
-.testimonial {
-  background: var(--card);
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  max-width: 600px;
-  width: 100%;
-  text-align: left;
-}
-
-/* === FOOTER === */
 footer {
   background: #eee;
   text-align: center;
@@ -132,27 +111,15 @@ footer {
   color: var(--text);
   width: 100%;
 }
-
-/* === DARK MODE TOGGLE === */
 .toggle-dark {
   position: fixed;
   top: 10px;
   right: 20px;
   z-index: 999;
 }
-
-/* === RESPONSIVE === */
 @media (max-width: 768px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    z-index: 999;
-  }
   .hero, .container, section, footer {
-    margin-left: 200px; /* Tetap sejajar dengan sidebar */
+    margin-left: 200px;
     padding: 30px 16px;
   }
   .profile-pic {
@@ -166,9 +133,6 @@ footer {
     font-size: 1rem;
   }
 }
-
-
-/* === FADE-IN ANIMATION === */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -180,8 +144,6 @@ footer {
     transform: translateY(0);
   }
 }
-
-/* === TYPING EFFECT === */
 .typing {
   font-size: 1.2rem;
   font-weight: bold;
@@ -192,21 +154,11 @@ footer {
   width: 0;
   animation: typing 4s steps(40, end) infinite, blink 0.7s step-end infinite;
 }
-
 @keyframes typing {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
+  0% { width: 0; }
+  50% { width: 100%; }
+  100% { width: 0; }
 }
-
 @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+  50% { border-color: transparent; }
 }

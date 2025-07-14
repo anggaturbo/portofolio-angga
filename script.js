@@ -1,4 +1,4 @@
-// Scroll to top
+// Tombol Scroll ke Atas
 window.addEventListener("scroll", function () {
   const scrollBtn = document.getElementById("scrollTopBtn");
   if (scrollBtn) scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
@@ -7,7 +7,7 @@ document.getElementById("scrollTopBtn")?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Highlight nav aktif
+// Highlight Navigation
 const links = document.querySelectorAll("nav ul li a");
 links.forEach(link => {
   if (window.location.href.includes(link.getAttribute("href"))) {
@@ -15,7 +15,7 @@ links.forEach(link => {
   }
 });
 
-// Tombol dark mode (ditambahkan via script, tidak dari HTML)
+// Tombol Dark Mode
 const toggle = document.createElement("button");
 toggle.textContent = "🌙/☀️";
 toggle.className = "toggle-dark";
@@ -28,11 +28,10 @@ if (localStorage.getItem("darkMode") === "true") {
   document.body.classList.add("dark");
 }
 
-// Efek Ketik Otomatis
+// Efek Mengetik
 const typingEl = document.querySelector(".typing");
 const phrases = ["Frontend Developer", "UI Designer", "Web Enthusiast"];
 let index = 0;
-
 function typeLoop() {
   typingEl.textContent = phrases[index];
   index = (index + 1) % phrases.length;
