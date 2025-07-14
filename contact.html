@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Kontak</title></head>
+<body>
+  <h2>Kontak Saya</h2>
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Nama" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <textarea name="message" placeholder="Pesan" required></textarea><br>
+    <button type="submit">Kirim</button>
+  </form>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("user_xxxxxxxxxxxxxxxxx"); // Ganti dengan USER ID EmailJS kamu
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      emailjs.sendForm('service_xxxx', 'template_xxxx', this)
+        .then(() => alert('Pesan berhasil dikirim!'), err => alert('Gagal: ' + JSON.stringify(err)));
+    });
+  </script>
+</body>
+</html>
