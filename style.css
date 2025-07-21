@@ -169,27 +169,6 @@ footer {
   z-index: 999;
 }
 
-/* Responsif */
-@media (max-width: 768px) {
-  .hero, .container, section, footer {
-    margin-left: 200px;
-    padding: 30px 16px;
-  }
-
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .typing {
-    font-size: 1rem;
-  }
-}
-
 /* Efek Fade-in */
 .fade-in {
   opacity: 0;
@@ -224,4 +203,70 @@ footer {
 
 @keyframes blink {
   50% { border-color: transparent; }
+}
+
+/* ✅ RESPONSIVE TAMBAHAN UNTUK MOBILE */
+@media (max-width: 768px) {
+  /* Sidebar jadi horizontal */
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px 0;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    margin: 0 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* Hilangkan margin kiri */
+  .hero, .container, section, footer {
+    margin-left: 0;
+    padding: 24px 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .typing {
+    font-size: 1rem;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  input, textarea {
+    font-size: 1rem;
+  }
+
+  .sosial-media-icons a svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
 }
