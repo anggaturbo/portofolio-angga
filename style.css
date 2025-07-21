@@ -21,6 +21,9 @@ body {
   font-family: 'Poppins', sans-serif;
   background: var(--bg);
   color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar {
@@ -66,12 +69,15 @@ body {
 
 .hero {
   margin-left: 220px;
-  padding: 40px 20px;
+  padding: 40px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: 220px;
 }
 
 .hero-text {
@@ -95,7 +101,9 @@ body {
 
 .container, section, footer {
   margin-left: 220px;
-  padding: 40px 20px;
+  padding: 40px 40px;
+  max-width: 1200px;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -152,6 +160,8 @@ button:hover {
 footer {
   background: #eee;
   padding: 20px;
+  margin-top: auto;
+  text-align: center;
 }
 
 .fade-in {
@@ -198,8 +208,7 @@ footer {
 
 .galeri-grid img {
   width: 100%;
-  height: auto;
-  max-height: 250px;
+  height: 250px;
   object-fit: cover;
   border-radius: 10px;
   background: #f0f0f0;
@@ -254,6 +263,6 @@ footer {
   }
 
   .galeri-grid img {
-    max-height: 150px;
+    height: 160px;
   }
 }
