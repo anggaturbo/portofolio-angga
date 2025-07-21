@@ -23,7 +23,7 @@ body {
   color: var(--text);
 }
 
-/* Sidebar Navigasi */
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -36,8 +36,6 @@ body {
 
 .sidebar ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .sidebar ul li a {
@@ -54,81 +52,40 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Kontainer Umum */
-.hero, .container, section, footer {
+/* Hero Section Layout */
+.hero {
   margin-left: 220px;
   padding: 40px 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-/* Galeri */
-.galeri-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 1000px;
-}
-
-.galeri-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.galeri-grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-}
-
-/* Tombol */
-button, .btn, .toggle-dark {
-  padding: 10px 20px;
-  background: #4a00e0;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-button:hover, .btn:hover {
-  background: #5d3bd0;
-}
-
-/* Formulir */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  max-width: 500px;
+.hero-text {
+  flex: 1;
   text-align: left;
 }
 
-input, textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  width: 100%;
-  box-sizing: border-box;
+.hero-image {
+  flex-shrink: 0;
 }
 
-/* Foto Profil */
 .profile-pic {
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid white;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  margin-bottom: 15px;
+}
+
+/* Container umum */
+.container, section, footer {
+  margin-left: 220px;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 /* Sosial Media */
@@ -152,24 +109,45 @@ input, textarea {
   fill: #8e2de2;
 }
 
-/* Footer */
-footer {
-  background: #eee;
-  text-align: center;
-  padding: 20px;
-  color: var(--text);
+/* Formulir */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
   width: 100%;
 }
 
-/* Tombol Mode Gelap */
-.toggle-dark {
-  position: fixed;
-  top: 10px;
-  right: 20px;
-  z-index: 999;
+/* Tombol */
+button {
+  padding: 10px 20px;
+  background: #4a00e0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-/* Efek Fade-in */
+button:hover {
+  background: #5d3bd0;
+}
+
+/* Footer */
+footer {
+  background: #eee;
+  padding: 20px;
+}
+
+/* Efek */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -183,7 +161,6 @@ footer {
   }
 }
 
-/* Efek Mengetik */
 .typing {
   font-size: 1.2rem;
   font-weight: bold;
@@ -205,26 +182,18 @@ footer {
   50% { border-color: transparent; }
 }
 
-/* ✅ RESPONSIVE TAMBAHAN UNTUK MOBILE */
+/* Responsif */
 @media (max-width: 768px) {
-  /* Sidebar jadi horizontal */
   .sidebar {
+    position: static;
     width: 100%;
     height: auto;
-    position: relative;
-    padding: 10px 0;
   }
 
   .sidebar ul {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0;
-  }
-
-  .sidebar ul li {
-    margin: 0 10px;
   }
 
   .sidebar ul li a {
@@ -232,41 +201,26 @@ footer {
     font-size: 0.9rem;
   }
 
-  /* Hilangkan margin kiri */
   .hero, .container, section, footer {
     margin-left: 0;
     padding: 24px 16px;
-    align-items: center;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text {
     text-align: center;
   }
 
   .profile-pic {
-    width: 100px;
-    height: 100px;
-  }
-
-  h1 {
-    font-size: 1.6rem;
+    width: 120px;
+    height: 120px;
   }
 
   .typing {
     font-size: 1rem;
-  }
-
-  form {
-    max-width: 100%;
-  }
-
-  input, textarea {
-    font-size: 1rem;
-  }
-
-  .sosial-media-icons a svg {
-    width: 36px;
-    height: 36px;
-  }
-
-  footer {
-    font-size: 0.9rem;
   }
 }
