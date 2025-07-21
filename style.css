@@ -188,6 +188,7 @@ footer {
   50% { border-color: transparent; }
 }
 
+/* ==== PERBAIKAN GALERI ==== */
 .galeri-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -197,9 +198,11 @@ footer {
 
 .galeri-grid img {
   width: 100%;
-  height: 250px;
+  height: auto;
+  max-height: 250px;
   object-fit: cover;
   border-radius: 10px;
+  background: #f0f0f0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -208,7 +211,7 @@ footer {
   transform: scale(1.05);
 }
 
-/* Responsif */
+/* RESPONSIF */
 @media (max-width: 768px) {
   .sidebar {
     position: static;
@@ -251,6 +254,6 @@ footer {
   }
 
   .galeri-grid img {
-    height: 150px;
+    max-height: 150px;
   }
 }
